@@ -19,6 +19,17 @@ public class Rectangle {
     }
     public int getX() { return this.x;}
     public int getY() { return this.y;}
+
+    // equals method to be used for testing purposes
+    public boolean equals(Rectangle other) {
+        if (other instanceof Rectangle) {
+            Rectangle that = (Rectangle) other;
+            return this.x == that.x && this.y == that.y;
+        } else {
+            return false;
+        }
+    }
+
     private int x;
     private int y;
     private int length;
